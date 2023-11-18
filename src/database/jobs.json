@@ -1,0 +1,82 @@
+[
+  {
+    "ID": "8d1e03b4-1289-4c6a-9b32-8d1c1f8a21e1",
+    "title": "Login Button Alignment Issue",
+    "description": "The login button is misaligned on smaller screens, affecting user experience.",
+    "category": ["Frontend"],
+    "payout": 5000,
+    "created": "2023-11-14"
+  },
+  {
+    "ID": "e61a4f43-7b78-47e7-8b7f-59db833c87e2",
+    "title": "Data Import Error",
+    "description": "Users encounter errors when importing large datasets. Investigation needed for optimization.",
+    "category": ["Backend", "Data Management"],
+    "payout": 8000,
+    "created": "2023-11-13"
+  },
+  {
+    "ID": "2f3bd2a7-1f45-42a5-8e67-9f6a8fcb10a5",
+    "title": "Broken Link in Navigation",
+    "description": "One of the navigation links leads to a non-existent page. Update link destination.",
+    "category": ["Frontend"],
+    "payout": 3000,
+    "created": "2023-11-12"
+  },
+  {
+    "ID": "afbd8a9e-0327-4a43-9df8-92477a458ecb",
+    "title": "Payment Gateway Integration Issue",
+    "description": "Transactions fail intermittently. Investigate and fix issues with the payment gateway integration.",
+    "category": ["Backend", "Payment"],
+    "payout": 10000,
+    "created": "2023-11-11"
+  },
+  {
+    "ID": "c07f2c4c-bd7b-4f67-917d-67eef9b39e58",
+    "title": "Mobile Responsiveness Problem",
+    "description": "Certain pages are not fully responsive on mobile devices. Optimize for various screen sizes.",
+    "category": ["Frontend"],
+    "payout": 4500,
+    "created": "2023-11-10"
+  },
+  {
+    "ID": "3d2bd065-4e7b-4e6a-97ed-81f41d4c7b87",
+    "title": "User Profile Update Error",
+    "description": "Users are unable to update their profile information. Investigate and resolve the issue.",
+    "category": ["Backend", "User Management"],
+    "payout": 6000,
+    "created": "2023-11-09"
+  },
+  {
+    "ID": "2f84f3e1-6d16-4213-a832-df24a59130a1",
+    "title": "Search Functionality Not Working",
+    "description": "The search feature is returning incorrect or no results. Debug and enhance search functionality.",
+    "category": ["Backend", "Frontend"],
+    "payout": 7000,
+    "created": "2023-11-08"
+  },
+  {
+    "ID": "1b0c9165-44bf-4f56-a431-6672a96a9c8e",
+    "title": "Email Notification Delay",
+    "description": "Users are experiencing delays in receiving email notifications. Investigate and optimize email sending process.",
+    "category": ["Backend"],
+    "payout": 5500,
+    "created": "2023-11-07"
+  },
+  {
+    "ID": "7895b4b4-872f-4d7f-b2a2-44a26c4f0987",
+    "title": "Cross-Browser Compatibility Issue",
+    "description": "Certain features do not work as expected in Internet Explorer. Ensure compatibility across major browsers.",
+    "category": ["Frontend"],
+    "payout": 4000,
+    "created": "2023-11-06"
+  },
+  {
+    "ID": "e7d4cbb3-0c23-4e01-ba0a-3b457872ec44",
+    "title": "Error Handling in Checkout Process",
+    "description": "Inconsistent error messages during checkout. Standardize error handling for a smoother user experience.",
+    "category": ["Frontend", "Payment"],
+    "payout": 7500,
+    "created": "2023-11-05"
+  }
+]
