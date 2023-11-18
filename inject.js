@@ -27,10 +27,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /*2. Replace the banner with a static banner. Use the same design to create the header, body and CTA.
     a) Make the header say "Get paid for fixing bugs!"
+*/
+
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelectorAll(".display-3");
+  for (let i = 0; i < header.length; i++) {
+    header[i].innerHTML = "Get paid for fixing bugs!";
+  }
+});
+
+/*
     b) Make the body say "Unlock your coding potential! Elevate your gig game by offering flawless solutions and get cash-money!"
     c) Just have one, green button that says "Find a bug"
     d) Find a new background image that you think will work with the hero content.
 */
+
 // 3. Remove the existing search functionality. Apparently, this is flawed and the corperate team don't see it being used much any way.
 
 document.addEventListener("DOMContentLoaded", () => {
