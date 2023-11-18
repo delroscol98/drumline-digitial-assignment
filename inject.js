@@ -32,4 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
     d) Find a new background image that you think will work with the hero content.
 */
 // 3. Remove the existing search functionality. Apparently, this is flawed and the corperate team don't see it being used much any way.
+
+document.addEventListener("DOMContentLoaded", () => {
+  const searchSection = document.querySelector(".bg-primary");
+  searchSection.remove();
+});
 // 4. The apply now button, in the bug listings will also need to be removed. This needs to also work when interacting with the list items. Remember, this needs to only be done in the frontend, using JavaScript.
