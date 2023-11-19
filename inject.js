@@ -30,10 +30,49 @@ document.addEventListener("DOMContentLoaded", () => {
 */
 
 document.addEventListener("DOMContentLoaded", () => {
-  const header = document.querySelectorAll(".display-3");
-  for (let i = 0; i < header.length; i++) {
-    header[i].innerHTML = "Get paid for fixing bugs!";
-  }
+  //Selects the banner container
+  const banner = document.querySelector(".owl-stage-outer");
+
+  //Selects and saves the node which contains the wanted carousel item
+  const bannerStage = document.querySelector(".owl-stage");
+  const bannerStageChild = document.querySelector(".owl-item.active");
+  bannerStage.removeChild(bannerStageChild);
+
+  //Removes banner with transition and transformation styles
+  bannerStage.remove();
+
+  //Creates new banner without transition and transformation styles and appends saves node
+  const newBanner = document.createElement("div");
+  newBanner.className = "owl-stage";
+  banner.appendChild(newBanner);
+  newBanner.appendChild(bannerStageChild);
+
+  //Replaces banner image
+  const bannerImg = newBanner.querySelector("img");
+  bannerImg.src = "/img/coding-money.jpeg";
+
+  //Modifies banner heading
+  const bannerHeading = newBanner.querySelector("h1");
+  bannerHeading.innerHTML = "Get paid for fixing bugs!";
+
+  //Modifies banner body
+  const bannerPara = newBanner.querySelector("p");
+  bannerPara.innerHTML =
+    "Unlock your coding potential! Elevate your gig game by offering flawless solutions and get cash-money!";
+
+  //Modifies banner button background
+  const bannerFirBtn = newBanner.querySelector(".btn-primary");
+  bannerFirBtn.setAttribute("style", "background-color: #00b074");
+
+  //Removes second banner button
+  const bannerSecBtn = newBanner.querySelector(".btn-secondary");
+  bannerSecBtn.remove();
+
+  //Removes carousel CTA and dots
+  const owlNav = document.querySelector(".owl-nav");
+  owlNav.remove();
+  const owlDots = document.querySelector(".owl-dots");
+  owlDots.remove();
 });
 
 /*
