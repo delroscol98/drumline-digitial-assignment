@@ -1,4 +1,10 @@
-export const jobListTemplate = ({ ID, title, description, payout, created }) => /*html*/`
+export const jobListTemplate = ({
+  ID,
+  title,
+  description,
+  payout,
+  created,
+}) => /*html*/ `
 	<div class="job-item p-4 mb-4" data-uuid=${ID}>
 		<div class="row g-4">
 			<div class="col-sm-12 col-md-8 d-flex align-items-center">
@@ -24,19 +30,13 @@ export const jobListTemplate = ({ ID, title, description, payout, created }) => 
 				<small class="text-truncate">
 					<i class="far fa-calendar-alt text-primary me-2"></i>
 					Date posted:
-					${
-						new Date(Date.parse(created))
-							.toLocaleDateString(
-								'en-AU',
-								{
-									day: 'numeric',
-									month: 'short',
-									year: 'numeric',
-								}
-							)
-					}
+					${new Date(Date.parse(created)).toLocaleDateString("en-AU", {
+            day: "numeric",
+            month: "short",
+            year: "numeric",
+          })}
 				</small>
 			</div>
 		</div>
 	</div>
-`
+`;
