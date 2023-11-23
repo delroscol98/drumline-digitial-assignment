@@ -4,7 +4,10 @@ const greenToRed = () => {
   const root = document.documentElement;
   root.style.setProperty("--primary", "#DE1738");
 
+  //Selects all elements
   const els = document.querySelectorAll("*");
+
+  //Loops through each element and isolates green elements and changes background/color to red
   for (let i = 0; i < els.length; i++) {
     if (els[i].className.includes("text-primary")) {
       els[i].classList.remove("text-primary");
@@ -12,7 +15,10 @@ const greenToRed = () => {
     } else if (els[i].className.includes("btn-primary")) {
       els[i].classList.remove("btn-primary");
       els[i].setAttribute("style", "background-color: #DE1738; color: white");
-    } else if (els[i].className.includes("bg-light")) {
+    } else if (
+      els[i].className.includes("bg-light") ||
+      window.getComputedStyle(els[i]).backgroundColor === "rgb(239, 253, 245)"
+    ) {
       els[i].classList.remove("bg-light");
       els[i].setAttribute("style", "background-color: #fdefef");
     }
@@ -57,8 +63,10 @@ const bannerHandler = () => {
 
   //Modifies banner button background
   const bannerFirBtn = newBanner.querySelector(".btn");
-  console.log(bannerFirBtn);
-  bannerFirBtn.setAttribute("style", "background-color: #00b074 !important");
+  bannerFirBtn.setAttribute(
+    "style",
+    "background-color: rgb(0, 176, 116); color: white"
+  );
   bannerFirBtn.innerHTML = "Find a bug";
 
   //Removes second banner button
@@ -85,19 +93,17 @@ const applyNowRemover = () => {
   const jobsContainer = document.querySelector(".tab-content");
 
   //Removes "apply now" buttons within jobs container
-  const applyNowBtns = jobsContainer.querySelectorAll(".btn.btn-primary");
+  const applyNowBtns = jobsContainer.querySelectorAll(".btn");
   for (let i = 0; i < applyNowBtns.length; i++) {
     applyNowBtns[i].remove();
   }
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  setTimeout(() => {
+  fetch("http://localhost:8080").then(() => {
     greenToRed();
     applyNowRemover();
-  }, 50);
-
-  bannerHandler();
-
-  searchSectionRemover();
+    bannerHandler();
+    searchSectionRemover();
+  });
 });
