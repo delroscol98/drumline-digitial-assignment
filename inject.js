@@ -4,25 +4,17 @@ const greenToRed = () => {
   const root = document.documentElement;
   root.style.setProperty("--primary", "#DE1738");
 
-  // Modifies all other green elements to red
-  const greenEls = document.querySelectorAll("*");
-  for (let i = 0; i < greenEls.length; i++) {
-    const backgroundClr = window.getComputedStyle(greenEls[i]).backgroundColor;
-    const clr = window.getComputedStyle(greenEls[i]).color;
-
-    if (backgroundClr === "rgb(0, 176, 116)") {
-      greenEls[i].setAttribute(
-        "style",
-        "background-color: #DE1738 !important; border-color: #DE1738 !important"
-      );
-    }
-
-    if (backgroundClr === "rgb(239, 253, 245)") {
-      greenEls[i].setAttribute("style", "background-color: #fdefef !important");
-    }
-
-    if (clr === "rgb(0, 176, 116)") {
-      greenEls[i].setAttribute("style", "color: #DE1738 !important");
+  const els = document.querySelectorAll("*");
+  for (let i = 0; i < els.length; i++) {
+    if (els[i].className.includes("text-primary")) {
+      els[i].classList.remove("text-primary");
+      els[i].setAttribute("style", "color: #DE1738");
+    } else if (els[i].className.includes("btn-primary")) {
+      els[i].classList.remove("btn-primary");
+      els[i].setAttribute("style", "background-color: #DE1738; color: white");
+    } else if (els[i].className.includes("bg-light")) {
+      els[i].classList.remove("bg-light");
+      els[i].setAttribute("style", "background-color: #fdefef");
     }
   }
 };
@@ -64,8 +56,9 @@ const bannerHandler = () => {
     "Unlock your coding potential! Elevate your gig game by offering flawless solutions and get cash-money!";
 
   //Modifies banner button background
-  const bannerFirBtn = newBanner.querySelector(".btn-primary");
-  bannerFirBtn.setAttribute("style", "background-color: #00b074");
+  const bannerFirBtn = newBanner.querySelector(".btn");
+  console.log(bannerFirBtn);
+  bannerFirBtn.setAttribute("style", "background-color: #00b074 !important");
   bannerFirBtn.innerHTML = "Find a bug";
 
   //Removes second banner button
